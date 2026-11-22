@@ -93,7 +93,7 @@ class GraphDrawing:
             loc=np.array([xy[0],xy[1],0.0])
             ring=Circle(radius=.35,stroke_width=3,color=CYAN,fill_color=BG,
                         fill_opacity=1).move_to(loc)
-            name=text(chr(65+v),size=25,weight='BOLD').move_to(loc)
+            name=text(chr(65+v),size=25,weight='BOLD').move_to(loc).set_z_index(1)
             d=text('d = '+fmt(init_dist[v]),size=17,color=SUB).next_to(ring,DOWN,buff=.09)
             d.set_opacity(0)
             grp=VGroup(ring,name,d)
